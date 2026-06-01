@@ -1,0 +1,12 @@
+{
+  "app_name": "涡轮社区-超速网络",
+  "panel_url": "http://154.21.202.154:36987",
+  "panel_urls": [
+    "http://154.21.202.154:36987"
+  ],
+  "latest_version": "1.0.0",
+  "min_version": "1.0.0",
+  "downloads": {
+    "win": ""
+  }
+}
