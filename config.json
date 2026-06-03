@@ -10,6 +10,8 @@
   "latest_version": "1.0.4",
   "min_version": "1.0.0",
   "downloads": {
-    "win": "https://github.com/wolun8/wolun/releases/download/v1.0.1/-.Setup.1.0.4.exe"
+    "win": "https://github.com/wolun8/wolun/releases/download/v1.0.1/-.Setup.1.0.4.exe",
+    "mac": "https://github.com/wolun8/wolun/releases/download/v1.0.1/-.1.0.4.dmg",
+    "android": "https://github.com/wolun8/wolun/releases/download/v1.0.1/-.1.0.4.apk"
   }
 }
