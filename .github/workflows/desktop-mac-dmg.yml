@@ -1,0 +1,36 @@
+name: Build macOS DMG
+
+on:
+  workflow_dispatch:
+
+env:
+  CSC_IDENTITY_AUTO_DISCOVERY: "false"
+
+jobs:
+  dmg:
+    runs-on: macos-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: mac-build
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build DMG
+        run: npm run dist -w @xboard/desktop-mac
+
+      - name: List DMG files
+        run: find apps/desktop-mac/release -name "*.dmg" -ls || true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mac-dmg
+          path: apps/desktop-mac/release/*.dmg
+          if-no-files-found: error
+          retention-days: 30
